@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet,Text,View, Button, TouchableOpacity, SafeAreaView } from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
+//import navigation link
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Just to see if github works: update done!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <SafeAreaView style={{flex:1,
+     justifyContent: 'center',
+     alignItems: "center",
+     backgroundColor: '#fff',
+     }}
+     >
+   <View>
+   <Text style={{fontSize: 30,
+   fontWeight: 'bold',
+   color: '#20315f'
+  }}>GAME ON</Text>
+   </View>
+   <TouchableOpacity style={{justifyContent: 'space-between',
+   flexDirection: 'row',
+   width: '250px',
+   padding: 20,
+   backgroundColor: '#AD40AF',
+   borderRadius: 5,
+   marginTop: '10px'
+  }}>
+     <Text style={{fontSize: 18, color: "#fff", fontWeight: 'bold', fontFamily: 'Roboto-Thin' }} >Let's Begin</Text>
+     <Icon name="right" size={22} color="#fff" />
+   </TouchableOpacity>
+   </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
